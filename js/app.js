@@ -9,7 +9,7 @@ const  renderProducts = () => {
     `
     <div id="item" class="col-sm-6 col-md-4 col-lg-3">
             <div class="imgs">
-              <img class="img-responsive" src="images/${item.cover}" alt="Responsive image">
+              <img class="img-responsive" src="./images/${item.cover}" alt="Responsive image">
               <div class="extra">
                 <span class="glyphicon glyphicon-info-sign" data-toggle="modal" data-target="#myModal${item.no}" title="Extra Information"></span>
                 <span class="glyphicon glyphicon-heart-empty" title="Add to your favorite list" onclick="addToFavList(${index})"></span>
@@ -47,7 +47,7 @@ const renderProductsModal = () => {
             <h4>${item.title}</h4>
             <p>${item.description}</p>
           </div>
-          <img src="images/${item.cover}" alt="responsive image">
+          <img src="./images/${item.cover}" alt="responsive image">
         </div>
       </div>
     </div>
@@ -70,7 +70,7 @@ function showAllProductsByConsole(csl){
     `
     <div id="item" class="col-sm-6 col-md-4 col-lg-3">
             <div class="imgs">
-              <img class="img-responsive" src="images/${item.cover}" alt="Responsive image">
+              <img class="img-responsive" src="./images/${item.cover}" alt="Responsive image">
               <div class="extra">
                 <span class="glyphicon glyphicon-info-sign" data-toggle="modal" data-target="#myModal${item.no}" title="Extra Information"></span>
                 <span class="glyphicon glyphicon-heart-empty" title="Add to your favorite list" onclick="addToFavList(${index})"></span>
@@ -105,7 +105,7 @@ function showAllProductsByGenre(gnr){
     `
     <div id="item" class="col-sm-6 col-md-4 col-lg-3">
             <div class="imgs">
-              <img class="img-responsive" src="images/${item.cover}" alt="Responsive image">
+              <img class="img-responsive" src="./images/${item.cover}" alt="Responsive image">
               <div class="extra">
                 <span class="glyphicon glyphicon-info-sign" data-toggle="modal" data-target="#myModal${item.no}" title="Extra Information"></span>
                 <span class="glyphicon glyphicon-heart-empty" title="Add to your favorite list" onclick="addToFavList(${index})"></span>
@@ -413,7 +413,7 @@ const renderFavItems = () => {
     favDiv.innerHTML += 
     `
     <li class="fav-items">
-      <img src="images/${item.cover}"></span>
+      <img src="./images/${item.cover}"></span>
       <span>${item.title}</span>
       <span><span class="glyphicon glyphicon-usd"></span>${item.price}</span>
       <span class="glyphicon glyphicon-trash" onclick="removeFromFavList('${item.title}')"></span>
