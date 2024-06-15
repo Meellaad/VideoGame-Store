@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Designer" content="Milad Pourvali Andarabi">
+    <meta name="Designer" content="میلاد پورولی اندرابی">
+    <title>GameShop</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+<!-- HEADER -->
+
+    <header>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span id="fplogo">Game</span><span id="lplogo">Shop</span></a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa-brands fa-playstation"></i> PlayStation <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Playstation 5</a></li>
+                  <li><a href="#">Playstation 4</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa-brands fa-xbox"></i> Xbox <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Xbox Series X</a></li>
+                  <li><a href="#">Xbox Series S</a></li>
+                  <li><a href="#">Xbox One</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa-solid fa-gamepad"></i> Nintendo <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Nintendo Switch</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" data-toggle="modal" data-target="#formModal"><span class="glyphicon glyphicon-user"></span> Sign In or Creat Account</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#cartModal" id="cartalert"><span id="redcircle"></span><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#favModal"><span class="glyphicon glyphicon-heart"></span> Favorites</a></li>
+            </ul>
+          </div><!-- .navbar-collapse -->
+        </div><!-- .container-fluid -->
+      </nav>
+      <div id="carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="images/banner1.jpg" alt="fifa 23">
+            <div class="carousel-caption">
+              <img src="images/sticker.png" alt="coming soon">
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/banner2.jpg" alt="red dead redemption 2">
+            <div class="carousel-caption">
+              <img src="images/sticker.png" alt="coming soon">
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/banner3.jpg" alt="forza horizon 3">
+            <div class="carousel-caption">
+              <img src="images/sticker.png" alt="coming soon">
+            </div>
+          </div>
+        </div>
+      
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+    
+<!-- MAIN -->
+
+    <main class="container">
+      <div class="row">
+
+  <!-- Aside -->
+
+        <aside class="container-fluid">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 col-lg-1"><b>Filters</b><span class="glyphicon glyphicon-filter"></span></div>
+            <div class="col-sm-5 col-md-3 col-lg-3">
+              <label>
+                By Console
+                <select name="console" id="console">
+                  <option>All</option>
+                  <option>Nintendo Switch</option>
+                  <option>Playstation 5</option>
+                  <option>Playstation 4</option>
+                  <option>Xbox Series X|S</option>
+                  <option>Xbox One</option>
+                </select>
+              </label>
+            </div>
+            <div class="col-sm-5 col-md-3 col-lg-3">
+              <label>
+                By Genre
+                <select name="genre" id="genre">
+                  <option>All</option>
+                  <option>Action & Advanture</option>
+                  <option>Kids & Family</option>
+                  <option>Racing & Flying</option>
+                  <option>Sports</option>
+                  <option>Shooters</option>
+                  <option>Roleplaying</option>
+                </select>
+              </label>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-2">
+              <label>
+                Sort By Price 
+                <span class="glyphicon glyphicon-sort-by-attributes" id="lowToHigh"></span>
+                <span class="glyphicon glyphicon-sort-by-attributes-alt" id="highToLow"></span>
+              </label>
+            </div>
+            <div class="col-sm-6 col-md-2 col-lg-3">
+              <label>
+                Sort Alphabetically 
+                <span class="glyphicon glyphicon-sort-by-alphabet" id="startToEnd"></span>
+                <span class="glyphicon glyphicon-sort-by-alphabet-alt" id="endToStart"></span>
+              </label>
+            </div>
+          </div>
+        </aside>
+
+  <!-- Section -->
+
+        <section class="container-fluid">
+          <div class="row" id="products"></div>
+        </section>
+      </div><!-- .row -->
+    </main>
+
+<!-- FOOTER -->
+
+    <footer>
+      <div class="top-footer container-fluid">
+        <div class="col-md-4">
+          <h3>About Us</h3>
+          <p>We created GameShop Marketplace to offer you a huge assortment, more than just GameShop products. Our Marketplace is like a virtual shopping mall that allows top-rated sellers to offer their products through GameShop.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Contact Us</h3>
+          <p>Address: 4586 Woodstock Drive, El Monte, California, 91731</p>
+          <p>Email: gameshop@mail.com<br>Tel: +1 626-518-9493</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Follow Us</h3>
+          <div>
+            <a href="#"><i class="fa-brands fa-youtube-square fa-3x"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram-square fa-3x"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-square fa-3x"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter-square fa-3x"></i></a>
+            <a href="#"><i class="fa-brands fa-square-google-plus fa-3x"></i></a>
+            <a href="#"><i class="fa-brands fa-steam-square fa-3x"></i></a>
+            <a href="#"><i class="fa-brands fa-twitch fa-3x"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer">All Rights Reserved &copy; 2022 By GameShop.com</div>
+    </footer>
+
+  <!-- MODALS -->
+
+    <!-- Main Section Modal -->
+
+  <div id="productsinfo"></div>
+
+    <!-- Form Modal -->
+
+    <div class="modal fade" id="formModal" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            <h6 class="modal-title" id="myModalLabel">If you don't have an account, please Sign Up.</h6>
+          </div>
+          <div class="modal-body">
+            <div class="login">
+              <h4>Log In</h4>
+              <form method="get" id="logForm">
+                <label>Username: 
+                  <input type="text" name="un" id="un">
+                </label>
+                <label>Password:
+                  <input type="password" name="pw" id="pw">
+                </label>
+                <input id="login-btn" type="submit" value="Log In" class="btn btn-danger btn-md">
+              </form>
+            </div>
+            <div class="signup">
+              <h4>Sign Up</h4>
+              <form method="get" id="regForm">
+                <fieldset>
+                  <label for="fn">First Name:</label>
+                  <input type="text" name="fn" id="fn" placeholder="Milad">
+                  <label for="ln">Last Name:</label>
+                  <input type="text" name="ln" id="ln" placeholder="Pourvali">
+                  <label for="em">Email:</label>
+                  <input type="email" name="em" id="em" placeholder="example@mail.com">
+                  <label for="pn">Phone Number:</label>
+                  <input type="text" name="pn" id="pn" placeholder="+1-xxx-xxx-xxxx">
+                </fieldset>
+                <fieldset>
+                  <label for="un">Username:</label>
+                  <input type="text" name="setun" id="un">
+                  <label for="pw">Password:</label>
+                  <input type="password" name="pw" id="pw">
+                  <label for="cpw">Confirm Password:</label>
+                  <input type="password" name="cpw" id="cpw">
+                </fieldset>
+                <input type="submit" value="Sign Up" class="btn btn-success btn-md">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Modal -->
+
+    <div class="modal fade" id="cartModal" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel"><span id="user"></span></h4>
+            <div id="dateAndTime"></div>
+          </div>
+          <div class="modal-body">
+            <h5>Shopping Cart</h5>
+            <ol id="cart-items"></ol>
+            <div id="priceshow"><b>Total Price:</b> <span class="glyphicon glyphicon-usd"></span> <span id="total-price"></span></div>
+            <div id="payment">
+              <button id="cashbtn" class="btn btn-success btn-md">Cash</button>
+              <button id="instalmentbtn" class="btn btn-info btn-md">Instalment</button>
+            </div>
+            <div id="cpay" class="row">
+              <button class="btn btn-primary btn-sm col-xs-6 col-xs-offset-3 col-lg-3 col-lg-offset-2"><i class="fa-brands fa-cc-visa"></i> Visa Card</button>
+              <button class="btn btn-primary btn-sm col-xs-6 col-xs-offset-3 col-lg-3 col-lg-offset-2"><i class="fa-brands fa-cc-mastercard"></i> Mastercard</button>
+              <button class="btn btn-primary btn-sm col-xs-6 col-xs-offset-3 col-lg-3 col-lg-offset-2"><i class="fa-brands fa-cc-amex"></i> American Express</button>
+              <button class="btn btn-primary btn-sm col-xs-6 col-xs-offset-3 col-lg-3 col-lg-offset-2"><i class="fa-brands fa-cc-paypal"></i> Paypal</button>
+            </div>
+            <div id="ipay">
+              <label>Instalment Duration(Month): 
+                <input type="number" name="monthNo" id="monthNo" min="2" max="24" value="12">
+              </label>
+              <button id="choutbtn" class="btn btn-warning btn-sm">Check Out</button>
+            </div>
+            <div id="final-price"></div>
+            <button id="showtable" class="btn btn-warning btn-md">Payment Table</button>
+            <table id="instalment-table"></table>
+            <div id="finalbtns">
+              <button id="conbtn" class="btn btn-danger btn-md">Continue</button>
+              <button id="printbtn" class="btn btn-default btn-md">Print</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Favorite Modal -->
+
+    <div class="modal fade" id="favModal" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Your Favorites</h4>
+          </div>
+          <div class="modal-body">
+            <ul id="favlist"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- SCRIPTS -->
+
+    <script src="js/jquery-1.12.4.min"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    
+  </body>
+</html>
